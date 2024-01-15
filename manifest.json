@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Blur Images",
+  "description": "Base Level Extension",
+  "version": "0.0",
+  "permissions": ["contextMenus"],
+  "icons": {
+    "16": "/img/img.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["blur-styles.css"],
+      "js": ["script.js"],
+      "all_frames": true
+    }
+  ]
+}
